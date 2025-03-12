@@ -1,7 +1,7 @@
 import mujoco
 import mujoco.viewer
 
-# Wczytanie model UR3
+# Wczytanie modelu UR3, xml UR3 jest w pliku scene.xml
 model = mujoco.MjModel.from_xml_path("scene.xml")
 data = mujoco.MjData(model)
 
