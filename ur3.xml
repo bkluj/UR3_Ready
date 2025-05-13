@@ -41,6 +41,9 @@
   </asset>
 
   <worldbody>
+
+    <camera name="top" pos="0 0 1.0" xyaxes="1 0 0 0 1 0"/>
+
     <body name="base" pos="0 0 0" childclass="ur3">
       <inertial mass="5.0" pos="0 0 0.05" diaginertia="0.02 0.02 0.02"/>
       <geom type="mesh" mesh="ur3_base"/>
