@@ -1,7 +1,8 @@
 <mujoco model="ur3">
   <compiler angle="radian" meshdir="assets"/>
-  
-  <option integrator="implicit" timestep="0.002"/>
+
+  <!-- Gravity = 0 below -->
+  <option integrator="implicit" timestep="0.002" gravity = "0 0 0"/>
   
   <default>
     <default class="ur3">
