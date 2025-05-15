@@ -2,8 +2,17 @@ import mujoco
 import mujoco.viewer
 import numpy as np
 
+
+
 # Wczytanie modelu UR3, xml UR3 jest w pliku scene.xml
-model = mujoco.MjModel.from_xml_path("/home/bartek/PycharmProjects/UR3_Ready/scene.xml")
+
+# PC
+# /home/bartek/Documents/UR3_Ready/scene.xml
+#
+# Laptop
+# /home/bartek/PycharmProjects/UR3_Ready/scene.xml
+
+model = mujoco.MjModel.from_xml_path("/home/bartek/Documents/UR3_Ready/scene.xml")
 data = mujoco.MjData(model)
 
 # Podgląd UR3
