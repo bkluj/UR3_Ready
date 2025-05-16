@@ -16,3 +16,5 @@ with mujoco.viewer.launch_passive(model, data) as viewer:
         data.ctrl[3] = np.pi/2
 
         viewer.sync()
+
+
