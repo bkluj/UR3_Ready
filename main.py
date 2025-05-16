@@ -12,7 +12,7 @@ import numpy as np
 # Laptop
 # /home/bartek/PycharmProjects/UR3_Ready/scene.xml
 
-model = mujoco.MjModel.from_xml_path("/home/bartek/Documents/UR3_Ready/scene.xml")
+model = mujoco.MjModel.from_xml_path("/home/bartek/PycharmProjects/UR3_Ready/scene.xml")
 data = mujoco.MjData(model)
 
 # Podgląd UR3
@@ -24,6 +24,6 @@ with mujoco.viewer.launch_passive(model, data) as viewer:
         data.ctrl[1] = np.pi/2
         data.ctrl[3] = np.pi/2
 
+
+
         viewer.sync()
-
-
