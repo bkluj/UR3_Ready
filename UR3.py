@@ -70,17 +70,33 @@ def move(typeofmove):
         # send_command("movej([-0.2, 0.2, 0.5, 0.5, -0.2, -1.3], a=0.2, v=0.3)")
         wait_for_stop()
     elif typeofmove == 2:
-        send_command(f"movej([{np.pi/7}, -{np.pi/3 - np.pi/50}, {np.pi/3}, -{np.pi/2}, -{np.pi/2 + -np.pi/12}, -1.4], a=0.2, v=0.3)")
+        send_command(f"movej([{np.pi/7}, -{np.pi/3 - np.pi/(3.04)}, {np.pi/3 - np.pi/4}, -{np.pi/2+np.pi/17}, -{np.pi/2- np.pi/4}, -1.4], a=0.2, v=0.3)")
         wait_for_stop()
     elif typeofmove == 3:
-        send_command(f"movej([{0}, -{np.pi/3+np.pi/20}, {np.pi/3}, -{np.pi/2}, -{np.pi/2 + -np.pi/12}, -1.4], a=0.2, v=0.3)")
+        send_command(f"movej([{0}, -{np.pi/3}, {np.pi/3}, -{np.pi/2}, -{np.pi/2}, -1.4], a=0.2, v=0.3)")
         wait_for_stop()
     elif typeofmove == 4:
-        send_command(f"movej([{-np.pi/8}, -{np.pi/3 - np.pi/50}, {np.pi/3}, -{np.pi/2}, -{np.pi/2 + -np.pi/12}, -1.4], a=0.2, v=0.3)")
+        send_command(f"movej([{-np.pi/8-np.pi/35}, -{np.pi/3 - np.pi/(2.86)}, {np.pi/3 - np.pi/4-np.pi/100}, -{np.pi/2+np.pi/7.6}, -{np.pi/2- np.pi/4}, -1.4], a=0.2, v=0.3)")
         wait_for_stop()
     elif typeofmove == 0:
         send_command(f"movej([-0.0, {-np.pi/2}, 0.0, 0.0, {np.pi/2}, {np.pi/2}], a=0.2, v=0.3)")
         wait_for_stop()
+
 move(0)
 
-# send_command("movej([0.1, -0.1, 0.6, 0.2, 0.45, -1.2], a=0.2, v=0.3)")
+'''
+def move(typeofmove):
+    if typeofmove == 1:
+        send_command("movej([-0.2, 0.2, 0.5, 0.5, -0.2, -1.3], a=0.2, v=0.3)")
+        wait_for_stop()
+    elif typeofmove == 2:
+        send_command("movej([0.0, 0.2, 0.0, 1.3, 0.45, -1.4], a=0.2, v=0.3)")
+        wait_for_stop()
+    elif typeofmove == 3:
+        send_command("movej([-0.35, 0.0, 0.0, 1.3, 0.45, -1.4], a=0.2, v=0.3)")
+        wait_for_stop()
+    else:
+        send_command("movej([-0.7, 0.2, 0.0, 1.3, 0.45, -1.4], a=0.2, v=0.3)")
+        wait_for_stop()
+'''
+

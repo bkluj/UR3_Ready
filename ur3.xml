@@ -50,26 +50,41 @@
 
   <worldbody>
 
-    <body name="pen" pos="0.5 0 0.05">
-      <geom type="mesh" mesh="pen" mass="0.5" rgba="0.2 0.8 0.2 1"/>
-    </body>
-    <body name="bottle" pos="0.75 0 0.05">
-      <geom type="mesh" mesh="bottle" mass="0.5" rgba="0.2 0.8 0.2 1"/>
-    </body>
-    <body name="matches" pos="1 0 0.05">
-      <geom type="mesh" mesh="matches" mass="0.5" rgba="0.2 0.8 0.2 1"/>
-    </body>
-    <body name="mug" pos="1.25 0 0.05">
-      <geom type="mesh" mesh="mug" mass="0.5" rgba="0.2 0.8 0.2 1"/>
-    </body>
-    <body name="parfum" pos="1.5 0 0.05">
-      <geom type="mesh" mesh="parfum" mass="0.5" rgba="0.2 0.8 0.2 1"/>
-    </body>
+
+  <body name="pen" pos="0.5 0 0.15">
+    <inertial mass="5.1" pos="0 0 0" diaginertia="0.001 0.001 0.001"/>
+    <joint name="pen_free_joint" type="free"/>
+    <geom type="mesh" mesh="pen" rgba="0.2 0.8 0.2 1"/>
+  </body>
+
+  <body name="bottle" pos="0.75 0 0.05">
+    <inertial mass="5.3" pos="0 0 0" diaginertia="0.001 0.001 0.001"/>
+    <joint name="bottle_free_joint" type="free"/>
+    <geom type="mesh" mesh="bottle" rgba="0.2 0.8 0.2 1"/>
+  </body>
+
+  <body name="matches" pos="1 0 0.05">
+    <inertial mass="5.01" pos="0 0 0" diaginertia="0.001 0.001 0.001"/>
+    <joint name="matches_free_joint" type="free"/>
+    <geom type="mesh" mesh="matches" rgba="0.2 0.8 0.2 1"/>
+  </body>
+
+  <body name="mug" pos="1.25 0 0.05">
+    <inertial mass="5.2" pos="0 0 0" diaginertia="0.001 0.001 0.001"/>
+    <joint name="mug_free_joint" type="free"/>
+    <geom type="mesh" mesh="mug" rgba="0.2 0.8 0.2 1"/>
+  </body>
+
+  <body name="parfum" pos="1.5 0 0.05">
+    <inertial mass="50.2" pos="0 0 0" diaginertia="0.001 0.001 0.001"/>
+    <joint name="parfum_free_joint" type="free"/>
+    <geom type="mesh" mesh="parfum" rgba="0.2 0.8 0.2 1"/>
+  </body>
 
     <!--
     <geom name="matches" type="box" pos="0.5 0 0.05" size="0.096 0.04 0.014" rgba="1 0 0 1"/>
     -->
-    <body name="base" pos="0 0 0" childclass="ur3" gravity = "false">
+    <body name="base" pos="0 0 0" childclass="ur3">
       <inertial mass="5.0" pos="0 0 0.05" diaginertia="0.02 0.02 0.02"/>
       <geom type="mesh" mesh="ur3_base"/>
       <body name="shoulder_link" pos="0 0 0.152">
