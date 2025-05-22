@@ -2,7 +2,7 @@
   <compiler angle="radian" meshdir="assets"/>
 
   <!-- Gravity = 0 below -->
-  <option integrator="implicit" timestep="0.002" gravity = "0 0 0"/>
+  <option integrator="implicit" timestep="0.002" gravity = "0 0 -9.81"/>
   
   <default>
     <default class="ur3">
@@ -40,23 +40,36 @@
     <mesh name="ur3_wrist2" file="ur3_wrist2.obj" />
     <mesh name="ur3_wrist3" file="ur3_wrist3.obj" />
 
-    <mesh name="bottle" file="Bottle.obj" />
-    <mesh name="matches" file="Matches.obj" />
-    <mesh name="mug" file="Mug.obj" />
-    <mesh name="parfum" file="Parfum.obj" />
-    <mesh name="pen" file="Pen.obj" />
+    <mesh name="pen" file="assets/Pen.STL" scale="0.001 0.001 0.001"/>
+    <mesh name="bottle" file="assets/Bottle.STL" scale="0.001 0.001 0.001"/>
+    <mesh name="matches" file="assets/Matches.STL" scale="0.001 0.001 0.001"/>
+    <mesh name="mug" file="assets/Mug.STL" scale="0.001 0.001 0.001"/>
+    <mesh name="parfum" file="assets/Parfum.STL" scale="0.001 0.001 0.001"/>
+
   </asset>
 
   <worldbody>
 
-    <!-- Bottle
-    <body name="bottle_body" pos="0.2 0.2 0.05">
-      <geom type="mesh" mesh="bottle" mass="0.3" rgba="0.9 0.3 0.3 1"/>
+    <body name="pen" pos="0.5 0 0.05">
+      <geom type="mesh" mesh="pen" mass="0.5" rgba="0.2 0.8 0.2 1"/>
     </body>
-    -->
-    <geom name="matches" type="box" pos="0.5 0 0.05" size="0.096 0.04 0.014" rgba="1 0 0 1"/>
+    <body name="bottle" pos="0.75 0 0.05">
+      <geom type="mesh" mesh="bottle" mass="0.5" rgba="0.2 0.8 0.2 1"/>
+    </body>
+    <body name="matches" pos="1 0 0.05">
+      <geom type="mesh" mesh="matches" mass="0.5" rgba="0.2 0.8 0.2 1"/>
+    </body>
+    <body name="mug" pos="1.25 0 0.05">
+      <geom type="mesh" mesh="mug" mass="0.5" rgba="0.2 0.8 0.2 1"/>
+    </body>
+    <body name="parfum" pos="1.5 0 0.05">
+      <geom type="mesh" mesh="parfum" mass="0.5" rgba="0.2 0.8 0.2 1"/>
+    </body>
 
-    <body name="base" pos="0 0 0" childclass="ur3">
+    <!--
+    <geom name="matches" type="box" pos="0.5 0 0.05" size="0.096 0.04 0.014" rgba="1 0 0 1"/>
+    -->
+    <body name="base" pos="0 0 0" childclass="ur3" gravity = "false">
       <inertial mass="5.0" pos="0 0 0.05" diaginertia="0.02 0.02 0.02"/>
       <geom type="mesh" mesh="ur3_base"/>
       <body name="shoulder_link" pos="0 0 0.152">
