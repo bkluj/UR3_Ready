@@ -6,7 +6,7 @@ import re
 
 # Wczytanie modelu UR3, xml UR3 jest w pliku scene.xml
 
-# PC
+# PCe
 # /home/bartek/Documents/UR3_Ready/scene.xml
 #
 # Laptop
